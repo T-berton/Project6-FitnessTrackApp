@@ -1,0 +1,12 @@
+<%= render '/shared/nav' %>
+
+<div class="container-fluid py-5 bg-primary">
+  <%= form_for(@activity, html: { multipart: true }) do |f| %>
+    <%= f.text_field :name, placeholder: "Name", class: 'form-control my-3 w-50' %>
+    <%= f.text_area :description, placeholder: "Description", class: 'form-control my-3 w-50' %>
+    <%= f.file_field :image, placeholder: "Image", class: 'form-control my-3 w-50  ' %>
+    <%= f.submit "Add Activity", class: "btn btn-primary m-5" %>
+  <% end %>
+</div>
+
+<%= render '/shared/footer' %>

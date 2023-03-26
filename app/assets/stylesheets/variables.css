@@ -1,0 +1,123 @@
+:root{
+    --bs-body-font-family: 'Literata', serif !important;
+    --bs-body-color: white;
+    --bs-link-hover-color: #fd288d !important;
+
+}
+
+.text-white {
+    color: white;
+}
+
+.text-black{
+    color: black;
+}
+
+
+.nav-item a:hover {
+    color: #fd288d !important;
+  }
+
+
+i:hover{
+    color: #fd288d !important;
+
+}
+
+
+.logo{
+    max-width: 65%;
+    height: auto;
+}
+
+.logo_footer{
+    max-width: 15%;
+}
+
+.h1-home{
+    font-size:  4.0em !important;
+    line-height: 5rem;
+}
+.h1-home-1{
+    color: #fd288d
+}
+.h1-home-2{
+    color: #ff66c4;
+}
+
+
+
+.orange{
+    color: #f7ae86;
+}
+.pink{
+    color: #fd288d;
+}
+
+
+.bg-orange {
+    background-color: #f7ae86 ;
+}
+
+.bg-secondary{
+    background-color: #fd288d !important;
+
+}
+
+.btn-primary{
+    background-color: #f7ae86;
+    border: none;
+    padding: 0.5rem 5rem;
+    --bs-btn-hover-bg: #f7ae86;
+    --bs-btn-hover-border-color: #f7ae86;
+    --bs-btn-active-bg: #fd288d;
+    --bs-btn-active-border-color: #fd288e;
+}
+.bg-primary {
+    background-color: #2B1821 !important;
+}
+.btn-secondary{
+    background-color: #f7ae86;
+    --bs-btn-hover-bg: #fd288d;
+    --bs-btn-hover-border-color: hsl(332, 87%, 55%);
+    --bs-btn-active-bg: #fd288d;
+    --bs-btn-active-border-color: #fd288e;
+}
+
+.form-control:focus {
+    border-color: hsl(324, 77%, 45%);
+    outline: 0;
+    box-shadow: 0 0 0 0.1rem #fd288e !important;
+  }
+
+  .dropdown-menu {
+    --bs-dropdown-link-active-bg: #f7ae86;
+  }
+
+
+.card-img-top-2 {
+    width: 100%;
+    height: 35vh;
+    object-fit: cover;
+    }
+
+a{
+    color: #fd288d
+}
+
+@media (max-width: 768px) {
+    .h1-home{
+        font-size: 3.0rem !important;
+        line-height: 3rem;
+    }
+    
+}
+
+
+@media (max-width: 321px) {
+    .h1-home{
+        font-size: 2.5rem !important;
+        line-height: 2.5rem;
+    }
+    
+}

@@ -1,0 +1,27 @@
+<%= render '/shared/nav' %>
+
+<div class="container-fluid py-5 bg-primary">
+  <div class="row">
+    <div class="col-md-10 mx-auto">
+        <h2 class="text-center orange">All Activities</h2>       
+    <div class="row gx-3 my-4 mx-2 gy-2">
+        <% @activities.each do |activity| %>
+        <div class="col-md-4 d-flex align-items-center justify-content-center">
+            <div class="card" style="width: 18rem;">
+                <%= image_tag asset_path(activity.image), class: "card-img-top-2" %>
+                <div class="card-body">
+                    <h5 class="card-title"><%= link_to "#{activity.name.capitalize}", show_path(activity), class: "card-link" %></h5>
+                  <p class="card-text text-dark"><%= activity.description.slice(0, 100) %>...</p>
+                </div>
+            </div>
+        </div>
+            <% end %>
+        </div>
+        <div class="justify-content-center d-flex">
+          <a href="<%= new_path %>" class="btn btn-primary">Add a new activity</a>
+        </div>
+    </div>
+  </div>
+</div>
+
+<%= render '/shared/footer' %>

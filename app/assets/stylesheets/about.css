@@ -1,0 +1,64 @@
+
+.background_about_1{
+    background-image: url('/assets/about_1.png');
+    background-repeat: no-repeat;
+    min-height: 100svh;
+    background-size: cover;
+}
+
+.text_about_1{
+    width: 60vw;
+}
+
+.background_about_2{
+    max-height: 100svh;
+}
+
+.text_about_2 {
+    color: #ff66c4;
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+.img_about_2{
+    width: 100%;
+}
+
+@media (max-width:768px) {
+
+    .background_about_1{
+        min-height: 80dvh;
+    }
+    .text_about_2 {
+        font-size: 1rem;
+    }
+    .text_about_1{
+        width: 70vw;
+    }
+}
+
+@media (max-width: 426px) {
+
+    .background_about_1{
+        min-height: 70dvh;
+    }
+
+    .img_about_2{
+            visibility: hidden;
+        }
+    .background_about_2{
+        max-height: 140dvh;
+    }
+    .text_about_1{
+        width: 80vw;
+    }
+}
+
+@media (max-width: 321px) {
+
+
+    .background_about_2{
+        max-height: 180dvh;
+    }
+    }
+    

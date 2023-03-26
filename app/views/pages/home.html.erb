@@ -1,0 +1,27 @@
+<%= render '/shared/nav' %>
+<div class="px-5 jumbotron bg-primary">
+      <div class="container-fluid py-5">
+        <div class="row d-flex align-items-center px-0">
+          <div class="col-md-7 col-12">
+            <h1 class="h1-home fw-bold"><span class="h1-home-1">Join the Fitness</span> Revolution with <span class="h1-home-2">Move and Groove</span></h1>
+             
+            <h2 class="my-5 fw-light fs-4">The ultimate fitness tracker for people who want to live an active and healthy lifestyle!</h2>
+            
+            <% if user_signed_in? %>
+                      <%= link_to "Hi #{current_user.email}, START NOW !", index_path, class: 'btn btn-primary w-100 ' %>
+            <% else %>
+                    <%= link_to 'JOIN US !',new_user_registration_path , class: 'btn btn-primary btn-lg' %>
+            <% end %>
+          </div>
+
+          <div class="col-md-5 col-12 my-5">
+            <%= image_tag 'home.png', class: 'img-fluid' %>
+          </div>
+      </div>
+    </div>
+</div>
+<div id="about">
+  <%= render 'about' %>
+</div>
+
+<%= render '/shared/footer' %>

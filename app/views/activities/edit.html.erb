@@ -1,0 +1,15 @@
+<%= render '/shared/nav' %>
+
+<div class="container-fluid bg-primary py-5">
+  <%= form_for(@activity, url: update_activity_path(@activity),html: {method: :patch}) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control my-3 w-50' %>
+
+    <%= f.label :description %>
+    <%= f.text_area :description, class: 'form-control my-3 w-50' %>
+
+    <%= f.submit "Save Changes", class: 'btn btn-primary' %>
+  <% end %>
+</div>
+
+<%= render '/shared/footer' %>

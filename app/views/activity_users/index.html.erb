@@ -1,0 +1,30 @@
+<%= render '/shared/nav' %>
+
+<div class="container-fluid py-5 bg-primary">
+  <h2 class="d-flex align-items-center justify-content-center mb-5">My Activities</h2 >
+
+  <% if @activity_users.any? %>
+      <div class="row ">
+      <% @activity_users.each do |activity_user| %>
+        <div class="col-md-4 col-xs-12 d-flex justify-content-center align-items-center">
+          <div class="card mb-3" style="width: 20rem;">
+            <%= image_tag asset_path(activity_user.activity.image), class: "card-img-top-2" %>
+            <div class="card-body">
+              <h5 class="card-title text-black"><%= activity_user.activity.name.capitalize%></h5>
+              <p class="card-text pink fw-bold"> Duration: <%= activity_user.duration%>min<br>Date: <%= activity_user.date%></p>
+            </div>
+            <div class="d-flex justify-content-center align-items-center">
+              <%= link_to 'Edit', activity_user_edit_path(id: activity_user.id), class: 'btn btn-secondary my-2' %>
+              <%= button_to("Delete",activity_user_destroy_path(id: activity_user.id),method: :delete, class: 'btn btn-secondary mx-2') %>
+            </div>
+          </div>
+        </div>
+    <% end %> 
+    </div> 
+    <% else %>
+      <p>No activities found</p>
+      <%= link_to 'Start your journey !', activity_user_new_path, class: 'btn btn-primary' %>
+  <% end %>
+</div>
+
+<%= render '/shared/footer' %>

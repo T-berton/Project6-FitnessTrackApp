@@ -1,0 +1,48 @@
+<footer>
+  <div class="container-fluid bg-orange text-light py-3">
+  <%= image_tag 'logo_noir.png', class:'logo_footer mb-3' %>
+    <div class="row column-gap-5">
+    
+      <div class="col-md-4">
+          <h4 class="my-5 h1-home-1 d-flex justify-content-center align-items-center">NEW YORK </h4>
+          <p class="d-flex justify-content-center align-items-center text-dark">
+            456 Pine Street New York,  NY 10001 <br>
+            (555) 123-4567 <br>
+            contact@mooveandgroove.com <br>
+
+          </p>
+      </div>
+      <div class="col-md-4 ">
+          <h4 class="my-5 h1-home-1 d-flex justify-content-center align-items-center">QUICK LINK</h4>
+          <ul class= "navbar-nav">
+            <li class="nav-item active d-flex justify-content-center align-items-center">
+              <%= link_to 'Home', home_path, class: 'nav-link text-black' %>
+            </li>
+            <li class="nav-item d-flex justify-content-center align-items-center">
+              <%= link_to 'About', '#about', class: 'nav-link text-black' %>
+            </li>
+            <li class="nav-item caca d-flex justify-content-center align-items-center">
+              <%= link_to 'All Activities', index_path, class: 'text-black nav-link' %>
+            </li>
+          </ul>
+      </div>  
+      <div class="col-md-4">
+          <h4 class="my-5 h1-home-1 d-flex justify-content-center align-items-center">STAY CONNECTED</h4>
+          <div class="d-flex justify-content-center align-items-center">
+            <%= link_to 'https://facebook.com/', target: '_blank' do %>
+              <i class="bi bi-facebook mx-2 fs-3 text-black"></i>
+            <% end %>
+            <%= link_to 'https://twitter.com/', target: '_blank' do %>
+              <i class="bi bi-twitter mx-2 fs-3 text-black"></i>
+            <% end %>
+            <%= link_to 'https://instagram.com/', target: '_blank' do %>
+              <i class="bi bi-instagram mx-2 fs-3 text-black"></i>
+            <% end %>
+          </div>
+      </div>
+    <div class="d-flex justify-content-center mt-5">
+        <p><span class="h1-home-1">Developed by Thomas Berton ©</p>
+
+    </div>
+  </div>
+</footer>
